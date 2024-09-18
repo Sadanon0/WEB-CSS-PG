@@ -1,0 +1,78 @@
+{% load compress %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content=
+		"width=device-width, initial-scale=1.0">
+	<title>{% block title %}Untitled{% endblock %}</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Athiti&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Mitr:wght@400;600&family=Prompt&display=swap" rel="stylesheet">
+	
+
+
+	{% compress css %}
+	<link rel="stylesheet"
+		href="{% static 'src/output.css' %}">
+	{% endcompress %}
+	
+</head>
+
+<body>
+	<nav class="bg-zinc-400 border-gray-200 py-2.5 dark:bg-sky-600 font-nirami">
+		<div class="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
+			<a href="#" class="flex items-center">
+				<img src="{% static 'images\food.jpg' %}" class="h-6 mr-3 sm:h-9" alt="Landwind Logo">
+				<span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">  Food  </span>
+			</a>
+			<div class="flex items-center lg:order-2">
+				<div class="hidden mt-2 mr-4 sm:inline-block">
+					<span></span>
+				</div>
+			</div>
+				<div class="items-center justify-between w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
+					<ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
+						<li>
+							<a href="/"
+								class="block py-2 pl-3 pr-4 text-white bg-lime-500 rounded lg:bg-transparent lg:text-blue-600 lg:p-0 dark:text-white"aria-current="page">
+								หน้าแรก
+							</a>
+						</li>
+						<li>
+							<a href="#"
+								class="block py-2 pl-3 pr-4 text-blue-600 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">
+								ตารางเทียบแคล
+							</a>
+						</li>
+						<li>
+							<a href="manager"
+								class="block py-2 pl-3 pr-4 text-blue-600 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">
+								ผู้จัดทำ
+							</a>
+						</li>
+					
+					
+			</div>
+		</div>
+	</nav>
+	
+	<div class="py-8">
+		<h2 class="text-center text-4xl underline font-niramit"> อาหารพื้นเมืองที่มีสรรพคุณต่อสุขภาพตามวิถีภูมิปัญญาท้องถิ่นของจังหวัดอุบลราชธานี </h2>
+	</div>
+
+	<div class="container mx-auto px-4 py-4">
+		{% block content %}
+		{% endblock content %}
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+{% extends "_base.html" %}
+{% load static %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+
+
+
+<div class=" mx-auto my-24 flex space-x-40" >
+    <div class="mx-auto items-center box-border w-96 h-auto border-4 border-slate-500 p-4 text-center font-nirami text-2xl "  >
+
+        <img class="mx-auto" src="{% static 'images\DOMON.jpg' %}"  width="250px" >
+        <h2 class="font-niramit font-mitr-400">นายศดานนท์ พรมธรรม</h2>
+
+            <h1 class="py-4">
+                นักศึกษา มออู้บู้ ชั้นปีที่ สามลบหนึ่ง 
+            </h1>
+            
+            <div class="flex space-x-10">
+                    <h1 class="bg-lime-300 rounded">
+                        นอน จุ๊ๆ
+                    </h1>
+                    <h1 class="bg-blue-400 rounded">
+                        Sport
+                    </h1>
+                    <h1 class="bg-yellow-500 rounded">
+                        Exercise
+                    </h1>
+
+            </div>
+                
+    </div>
+</div>
+
+{% endblock content %}
